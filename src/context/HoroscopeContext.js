@@ -10,6 +10,7 @@ export const HoroscopeProvider = props => {
   return (
     <HoroscopeContext.Provider value={{ sign, setCurrentSign }}>
       {props.children}
+      {/* <App /> */}
     </HoroscopeContext.Provider>
   );
 };
