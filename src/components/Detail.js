@@ -1,8 +1,13 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { HoroscopeContext } from '../context/HoroscopeContext';
 
 const Detail = () => {
   const { sign } = useContext(HoroscopeContext);
+  const [currentSign, setCurrentSign] = useState(sign);
+  
+  useEffect(() => {
+    console.log('DETAIL: rerendering');
+  }, [currentSign]);
 
   return (
     <div className='details'>
